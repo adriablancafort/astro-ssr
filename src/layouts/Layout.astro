@@ -1,0 +1,78 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import ProgressBar from "../components/ProgressBar.astro"
+import CookieBanner from "../components/CookieBanner";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+
+    <link rel="shortcut icon" type="image/svg+xml" href="/images/brickoram-favicon.svg" />
+    <link rel="apple-touch-icon" href="/images/brickoram-apple-touch-icon.png" />
+
+    <ViewTransitions />
+  </head>
+  <body class="flex">
+    <ProgressBar />
+    <slot />
+    <CookieBanner />
+  </body>
+</html>
+
+<style is:global>
+
+@font-face {
+  font-family: "Brickoram";
+  font-weight: 400;
+  src: url("../fonts/Brickoram-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url("../fonts/Inter-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  src: url("../fonts/Inter-600.woff2") format("woff2");
+}
+
+* {
+  font-family: "Inter";
+}
+
+h1, h2, h3 {
+  font-family: "Brickoram";
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+.skeleton {
+  background: linear-gradient(110deg, #f3f4f6 40%, #ffffff 50%, #f3f4f6 60%);
+  background-size: 270%;
+  background-position: right 20px top 0;
+  animation: skeleton-loading 1s ease infinite;
+}
+
+@keyframes skeleton-loading {
+    to {
+        background-position: left 20px top 0;
+    }
+}
+
+.product-card-hover:hover {
+  box-shadow: #d1d5db 0px 4px 30px 1px;
+  transform: scale(1.01);
+  transition: all 20ms;
+}
+</style>

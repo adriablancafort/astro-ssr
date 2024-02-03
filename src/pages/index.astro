@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Cart from "../components/Cart";
+import Products from "../components/Products";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Your Page Title" description="Your Page Description" image="path/to/your/image.jpg" canonicalUrl="https://example.com" type="website">
+  <div class="w-full">
+    <Header />
+    <main class="mx-auto max-w-7xl px-6">
+		<Products client:load />
+    </main>
+    <Footer />
+  </div>
+  <Cart client:load />
+</Layout>
