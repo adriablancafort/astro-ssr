@@ -7,12 +7,16 @@ export default function ProductCard({ product }: { product: ProductCard }) {
     const [quantity, setQuantity] = useState(1);
 
     return (
-        <a href={`/product/${product.id}`} className="p-3 pb-6 space-y-2 rounded border bg-white product-card-hover" >
+        <a href={`/product/${product.id}`} className="relative p-3 pb-6 space-y-2 rounded border bg-white product-card-hover" >
 
             <div className="text-xs px-1 inline-flex items-center text-orange-400 border border-orange-400 space-x-0.5 rounded-sm">
                 <img src="/images/fire-icon-orange.svg" width="13px" height="13px" />
                 <span>Flash sale</span>
             </div>
+
+            <button className="absolute top-1 right-3 p-0.5 border rounded hover:bg-gray-100">
+                <img src="/images/heart-black-empty-icon.svg" width="16px" height="14px" />
+            </button>
 
             <img className="skeleton" src={product.image} alt={product.title} loading="lazy" />
         

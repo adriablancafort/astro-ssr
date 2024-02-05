@@ -6,13 +6,13 @@ let offset = 10;
 let autoscroll = 0;
 export const showLoadMoreButton = atom(false);
 
-const initialProductCards = await ( await fetch(`https://fakestoreapi.com/products?limit=${offset}`)).json();
+const initialProductCards = await ( await fetch(`https://api.brickoram.com/v1/products?limit=${offset}`)).json();
 export const productCards = atom<ProductCard[]>(initialProductCards);
 
 export async function loadMoreProducts() {
     if (autoscroll < 5) {
         offset += 10;
-        const moreProductCards = await ( await fetch(`https://fakestoreapi.com/products?limit=${offset}`)).json();
+        const moreProductCards = await ( await fetch(`https://api.brickoram.com/v1/products?limit=${offset}`)).json();
         productCards.set([...productCards.get(), ...moreProductCards]);
         autoscroll++;
     } else {
