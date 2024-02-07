@@ -6,8 +6,8 @@ export default function ProductCard({ product }: { product: ProductCard }) {
 
     const [quantity, setQuantity] = useState(1);
 
-    return (
-        <a href={`/product/${product.id}`} className="relative p-3 pb-6 space-y-2 rounded border bg-white product-card-hover" >
+    return (                  
+        <a href={`/product/${product.id}`} className="relative p-3 pb-6 space-y-2 rounded bg-white border product-card-hover" >
 
             <div className="text-xs px-1 inline-flex items-center text-orange-400 border border-orange-400 space-x-0.5 rounded-sm">
                 <img src="/images/fire-icon-orange.svg" width="13px" height="13px" />

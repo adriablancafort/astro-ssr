@@ -6,7 +6,7 @@ export default function CookieBanner() {
     const $isCookieBannerOpen = useStore(isCookieBannerOpen);
 
     return $isCookieBannerOpen ? (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 p-6 bg-white backdrop-blur-lg bg-opacity-80 rounded border shadow-lg" >
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 p-6 bg-white backdrop-blur-lg bg-opacity-80 rounded border shadow-lg z-10" >
             <img className="pb-4" src="/images/brickoram-logo-dark.svg" alt="Brickoram Logo" width="210px" height="36px" />
 
             <p>This website uses cookies to ensure you get the best experience.</p>
