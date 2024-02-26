@@ -25,8 +25,8 @@ export default function CookieBanner() {
             </div>
 
             <div className="flex justify-center space-x-4">
-                <button className="bg-black hover:bg-gray-900 focus:ring-1 ring-offset-2 ring-black text-white text-lg rounded px-6" >Manage Settings</button >
-                <button onClick={() => closeCookieBanner()} className="bg-custom-red hover:bg-custom-red-hover focus:ring-1 ring-offset-2 ring-custom-red text-white text-lg rounded px-6" >Accept and close</button >
+                <button className="bg-black hover:bg-gray-900 text-white text-lg rounded px-6" >Manage Settings</button >
+                <button onClick={() => closeCookieBanner()} className="bg-custom-red hover:bg-custom-red-hover text-white text-lg rounded px-6" >Accept and close</button >
             </div>
         </div>
     ) : null;

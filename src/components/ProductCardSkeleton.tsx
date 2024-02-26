@@ -9,7 +9,7 @@ export default function ProductCard() {
                 <div className="h-4 w-4/5 skeleton rounded"></div>
             </h3>
             
-            <div className="text-gray-100 flex items-center text-xs">
+            <div className="text-[#f1f1f1] flex items-center text-xs">
                 <img src="/images/star-icon-gray.svg" width="14px" height="14px" />
                 <img src="/images/star-icon-gray.svg" width="14px" height="14px" />
                 <img src="/images/star-icon-gray.svg" width="14px" height="14px" />

@@ -38,7 +38,7 @@ export default function Cart() {
             <div ref={loadMoreProductsRef}>
                 { $showLoadMoreButton ? (
                     <div className="text-center py-12">
-                        <button onClick={() => resetProductsAutoscroll()} className="text-white text-lg bg-black hover:bg-gray-900 focus:ring-1 ring-offset-2 ring-black rounded px-4" >Load More</button>
+                        <button onClick={() => resetProductsAutoscroll()} className="text-white text-lg bg-black hover:bg-gray-900 rounded px-4" >Load More</button>
                     </div>
                 ) : (
                     <ul className="pt-2 pb-12 grid sm:grid-cols-5 grid-cols-2 gap-2">

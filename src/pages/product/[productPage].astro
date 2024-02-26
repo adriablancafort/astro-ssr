@@ -9,13 +9,14 @@ import type { ProductPage } from "../../types/ProductPage";
 
 export async function getStaticPaths() {
   const productPages: ProductPage[] = await (
-    await fetch(`https://api.brickoram.com/v1/products`)
+    await fetch(`https://fakestoreapi.com/products/`)
   ).json();
 
   return productPages.map((productPage) => ({
     params: { productPage: productPage.id.toString() },
   }));
 }
+
 
 const { productPage } = Astro.params;
 
@@ -93,5 +94,5 @@ const product: ProductPage = await (
     </main>
     <Footer />
   </div>
-  <Cart client:load />
+  <Cart client:load transition:persist />
 </Layout>
