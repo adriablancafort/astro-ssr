@@ -1,6 +1,5 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import ProgressBar from "../components/ProgressBar.astro";
 import CookieBanner from "../components/CookieBanner";
 ---
 
@@ -198,7 +197,6 @@ import CookieBanner from "../components/CookieBanner";
     <ViewTransitions />
   </head>
   <body class="flex">
-    <ProgressBar />
     <slot />
     <CookieBanner />
     <style is:global>
